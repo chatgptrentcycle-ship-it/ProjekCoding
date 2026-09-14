@@ -3,28 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+
+    <title>TaskFlow - To-Do List</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>📝 To-Do List</h1>
-        <p>Catat semua tugasmu di sini!</p>
 
-        <div class="input-area">
-            <input type="text" id="taskInput" placeholder="Masukkan tugas...">
-            <button onclick="tambahTugas()">Tambah</button>
+        <!-- Header -->
+        <div class="header">
+            <div class="icon">✓</div>
+
+            <div>
+                <h1>TaskFlow</h1>
+                <p>Atur tugasmu, raih harimu!</p>
+            </div>
         </div>
 
+        <!-- Informasi -->
+        <div class="info">
+            <h2>Daftar Tugas</h2>
+            <p>Jangan lupa selesaikan tugasmu hari ini.</p>
+        </div>
+
+        <!-- Input Tugas -->
+        <div class="input-area">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Apa yang ingin kamu kerjakan?"
+            >
+
+            <button onclick="tambahTugas()">
+                + Tambah
+            </button>
+        </div>
+
+        <!-- Daftar Tugas -->
         <ul id="taskList"></ul>
 
+        <!-- Tombol Hapus -->
         <button class="hapus-semua" onclick="hapusSemua()">
-            Hapus Semua
+            🗑 Hapus Semua Tugas
         </button>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2026 TaskFlow | Kelola tugas dengan mudah</p>
+        </div>
+
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
